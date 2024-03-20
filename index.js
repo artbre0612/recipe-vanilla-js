@@ -17,7 +17,7 @@ function getMealList(){
     .then(res => res.json())
     .then(data => {
       let html = ''
-      if(searchInputText.length > 0){
+      if(data.meals){
         data.meals.forEach(meal => {
           html +=
           `<div class="meal-item" data-id="${meal.idMeal}">
